@@ -1,0 +1,17 @@
+services:
+  admin:
+    build:
+      context: ./  # Admin Server의 Dockerfile 경로
+    ports:
+      - "5001:5001"
+    environment:
+      - DB_HOST=mysql_container   # MySQL 컨테이너 이름
+      - DB_USER=root             # MySQL 사용자 이름
+      - DB_PASSWORD=root         # MySQL 비밀번호
+      - DB_NAME=concerts         # 데이터베이스 이름
+      - PORT=5001
+    networks:
+      - app-network              # 컨테이너 간 통신을 위한 네트워크
+networks:
+  app-network:
+    driver: bridge               # 브리지 네트워크
