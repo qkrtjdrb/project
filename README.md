@@ -2,7 +2,7 @@ concerts-main 과 web-server를 도커화 하였고 aws ec2 네트워크와 맞�
 adminserver 작업 완료 concerts-main 서버 db에 연결해서 명령어로 DB수정 작업 및 예약현황 조회 가능 
 
 docker.file
-#베이스 이미지 설정
+# 베이스 이미지 설정
 FROM node:18
 
 # 작업 디렉토리 설정(도커 내부에서 작업이 이루어질 디렉토리)
