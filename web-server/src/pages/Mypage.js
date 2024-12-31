@@ -1,10 +1,13 @@
 // src/pages/MyPage.js
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import Button from "../components/Button";
 
 function MyPage() {
   const [userInfo, setUserInfo] = useState(null); // 유저 정보
   const [loading, setLoading] = useState(true);   // 로딩 상태
+  const Navigate = useNavigate();
 
   useEffect(() => {
     // 1) 로컬 스토리지에서 JWT 토큰 불러오기
@@ -47,6 +50,7 @@ function MyPage() {
       <p>이름: {userInfo.name}</p>
       <p>가입일: {userInfo.createdAt}</p>
       {/* 필요하면 더 많은 필드 표시 */}
+      <Button onClick={() => Navigate("/")}> 홈 </Button>
     </div>
   );
 }
