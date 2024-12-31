@@ -12,6 +12,7 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import SeatSelection from "./pages/SeatSelection";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -20,10 +21,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Concerts" element={<Concerts />} />
-          <Route path="/SeatSelection" element={<SeatSelection />} />
           <Route path="/Mypage" element={<Mypage />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
+          <Route path="/SeatSelection" element={<PrivateRoute> <SeatSelection /> </PrivateRoute>} />
         </Routes>
       </div>
     </BrowserRouter>

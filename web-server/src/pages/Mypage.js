@@ -14,6 +14,7 @@ function MyPage() {
     const token = localStorage.getItem("jwtToken");
     if (!token) {
       // 토큰이 없으면 로그인 페이지로 보낼 수도 있음
+      alert("로그인이 필요합니다!");
       window.location.href = "/login";
       return;
     }
