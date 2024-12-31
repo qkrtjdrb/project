@@ -1,0 +1,24 @@
+# 1. Node.js 이미지 사용 (LTS 버전 권장)
+FROM node:18
+
+# 2. 작업 디렉토리 설정
+WORKDIR /usr/src/app
+
+# 3. 필요한 파일 복사 (package.json 및 package-lock.json 복사)
+COPY package*.json ./
+
+# 4. 네이티브 모듈 빌드 도구 설치
+# bcrypt와 같은 네이티브 모듈을 설치하기 위해 Python, make, g++가 필요합니다.
+RUN apt-get update && apt-get install -y python3 make g++ && rm -rf /var/lib/apt/lists/*
+
+# 5. 의존성 설치 (bcrypt를 소스에서 빌드)
+RUN npm install --build-from-source
+
+# 6. 애플리케이션 코드 복사
+COPY . .
+
+# 7. 애플리케이션에서 사용하는 포트 노출
+EXPOSE 5010
+
+# 8. 애플리케이션 실행
+CMD ["node", "Login.js"]

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import Button from "../components/Button";
 
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const Navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -46,6 +49,7 @@ function Register() {
         </div>
         <button type="submit">회원가입</button>
       </form>
+      <Button onClick={() => Navigate("/")}> 홈 </Button>
     </div>
   );
 }

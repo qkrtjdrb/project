@@ -53,6 +53,7 @@ function Login() {
         <button type="submit">로그인</button>
         <Button onClick={() => Navigate("/Register")}> 회원가입 </Button>
       </form>
+      <Button onClick={() => Navigate("/")}> 홈 </Button>
     </div>
   );
 }

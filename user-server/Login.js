@@ -1,5 +1,5 @@
 const express = require("express");
-const bcrypt = require("bcrypt");
+const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const authMiddleware = require("./component/authMiddleware")
@@ -28,7 +28,7 @@ app.post("/api/register", async (req, res) => {
     }
 
     // 2) 비밀번호 해싱
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await bcryptjs.hash(password, 10);
 
     // 3) 새로운 사용자 객체 생성 및 저장(인메모리)
     const newUser = { email, password: hashedPassword };
@@ -59,7 +59,7 @@ app.post("/api/login", async (req, res) => {
     }
 
     // 2) 비밀번호 비교
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await bcryptjs.compare(password, user.password);
     if (!isMatch) {
       return res
         .status(401)
