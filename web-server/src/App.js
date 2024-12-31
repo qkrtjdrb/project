@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Mypage from "./pages/Mypage";
 import Concerts from "./pages/Concerts";
+import Register from "./pages/Register";
 import {
   Routes,
   Route,
@@ -22,6 +23,7 @@ function App() {
           <Route path="/SeatSelection" element={<SeatSelection />} />
           <Route path="/Mypage" element={<Mypage />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/Register" element={<Register />} />
         </Routes>
       </div>
     </BrowserRouter>
