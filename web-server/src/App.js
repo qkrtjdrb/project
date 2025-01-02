@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Mypage from "./pages/Mypage";
 import Concerts from "./pages/Concerts";
 import Register from "./pages/Register";
+import QueuePage from "./pages/Queue";
 import {
   Routes,
   Route,
@@ -24,6 +25,7 @@ function App() {
           <Route path="/Mypage" element={<Mypage />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
+          <Route path="/queue" element={<QueuePage />} />
           <Route path="/SeatSelection" element={<PrivateRoute> <SeatSelection /> </PrivateRoute>} />
         </Routes>
       </div>
