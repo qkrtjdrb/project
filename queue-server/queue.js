@@ -10,7 +10,7 @@ app.use(cors());
 
 // Redis 연결 (로컬 환경 예시)
 const redis = new Redis({
-  host: 'redis',
+  host: 'redis-server',
   port: 6379,
 });
 

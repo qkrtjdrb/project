@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import Button from "../components/Button";
 
 function SeatSelection() {
   const [selectedSeat, setSelectedSeat] = useState(null);
@@ -10,7 +12,7 @@ function SeatSelection() {
     setSelectedSeat(seat);
   };
 
-
+  const Navigate = useNavigate();
 
   const handleReservation = () => {
     if (selectedSeat) {
@@ -63,6 +65,7 @@ function SeatSelection() {
       <button onClick={handleReservation} style={{ marginTop: "20px" }}>
         예매
       </button>
+      <Button onClick={() => Navigate("/")}> 홈 </Button>
     </div>
   );
 }

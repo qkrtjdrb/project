@@ -1,4 +1,3 @@
-import react from "react";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Mypage from "./pages/Mypage";
@@ -8,8 +7,6 @@ import QueuePage from "./pages/Queue";
 import {
   Routes,
   Route,
-  Router,
-  useNavigate,
   BrowserRouter,
 } from "react-router-dom";
 import SeatSelection from "./pages/SeatSelection";
