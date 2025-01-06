@@ -2,7 +2,7 @@ FROM node:18
 
 WORKDIR /usr/src/app
 
-COPY adminserver/package*.json .
+COPY admin-server/package*.json .
 RUN npm install
 
 COPY . .
