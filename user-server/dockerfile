@@ -5,7 +5,7 @@ FROM node:18
 WORKDIR /usr/src/app
 
 # 3. 필요한 파일 복사 (package.json 및 package-lock.json 복사)
-COPY package*.json ./
+COPY user-server/package*.json ./
 
 # 4. 네이티브 모듈 빌드 도구 설치
 # bcrypt와 같은 네이티브 모듈을 설치하기 위해 Python, make, g++가 필요합니다.
