@@ -1,0 +1,8 @@
+# Docker Hub에서 공식 Redis 이미지를 기반으로 함
+FROM redis:latest
+
+# Redis는 기본 포트로 6379를 사용
+EXPOSE 6379
+
+# 기본적으로 redis-server 실행
+CMD ["redis-server"]
