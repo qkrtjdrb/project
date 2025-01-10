@@ -15,7 +15,7 @@ function Concerts() {
 
   useEffect(() => {
     axios
-      .get("http://concert-deployment-c9fc66cb5-hqt2b:5000")
+      .get("http://concert-deployment-c9fc66cb5-hqt2b:5000/Concerts")
       .then((response) => {
         setConcerts(response.data);
       })
