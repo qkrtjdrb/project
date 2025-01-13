@@ -12,6 +12,7 @@ const DB_HOST = process.env.DB_HOST || "concerts-server-db";
 const DB_USER = process.env.DB_USER || "root";
 const DB_PASSWORD = process.env.DB_PASSWORD || "root";
 const DB_NAME = process.env.DB_NAME || "concerts";
+const DB_PORT = process.env.DB_PORT || "3306"
 
 let db;
 
@@ -22,6 +23,7 @@ async function connectToDatabase() {
     user: DB_USER,
     password: DB_PASSWORD,
     database: DB_NAME,
+    DB_PORT,
   });
   console.log("Connected to MySQL Database");
 }
