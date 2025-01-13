@@ -15,7 +15,7 @@ function Concerts() {
 
   useEffect(() => {
     axios
-      .get("http://concert-deployment-c9fc66cb5-hqt2b:5000/Concerts")
+      .get("http://concerts-server:5000/Concerts")
       .then((response) => {
         setConcerts(response.data);
       })
@@ -28,7 +28,7 @@ function Concerts() {
   const handleEnterQueue = async () => {
     try {
       // 서버에 '대기열 등록' 요청
-      const response = await axios.post("http://localhost:3001/api/enter-queue");
+      const response = await axios.post("http://queue-server:3001/api/enter-queue");
       const data = response.data;
 
       // 서버가 { queueId: 'xxxx-xxx-xxxx', message: '...' } 같은 형태로 응답한다고 가정
