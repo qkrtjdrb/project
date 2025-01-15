@@ -11,7 +11,7 @@ import { sequelize } from "./databases.js"
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+//
 // 환경 변수
 const PORT = process.env.PORT || 5001;
 const DB_HOST = process.env.DB_HOST;
