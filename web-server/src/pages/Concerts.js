@@ -17,7 +17,7 @@ function Concerts() {
 
   useEffect(() => {
     axios
-      .get("https://concerts-server:5000/Concerts")
+      .get("https://stage.teenaa.shop/Concerts")
       .then((response) => {
         setConcerts(response.data);
       })
