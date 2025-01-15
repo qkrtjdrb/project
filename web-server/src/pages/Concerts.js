@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import axios from "axios";
 
+
+//
 // 날짜 "YYYY년 MM월 DD일" 변환 예시
 function formatDate(dateString) {
   const options = { year: "numeric", month: "long", day: "numeric" };
