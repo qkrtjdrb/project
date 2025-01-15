@@ -17,7 +17,7 @@ function QueuePage() {
 
     const intervalId = setInterval(() => {
       axios
-        .get(`http://localhost:3001/api/queue-status?queueId=${queueId}`)
+        .get(`https://stage.teenaa.shop:30010/api/queue-status?queueId=${queueId}`)
         .then((response) => {
           // 서버가 { status, position }을 내려준다고 가정
           const { status, position } = response.data;

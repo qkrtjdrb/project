@@ -21,7 +21,7 @@ function MyPage() {
 
     // 2) 토큰을 헤더에 넣어서 GET /api/me 요청
     axios
-      .get("http://localhost:5010/api/me", {
+      .get("https://stage.teenaa.shop:30100/api/me", {
         headers: {
           // Authorization 헤더 형식: "Bearer <토큰>"
           Authorization: `Bearer ${token}`,

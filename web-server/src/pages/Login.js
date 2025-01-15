@@ -13,7 +13,7 @@ function Login() {
     e.preventDefault();
     try {
       // 로그인 API 호출
-      const response = await axios.post("http://localhost:5010/api/login", {
+      const response = await axios.post("https://stage.teenaa.shop:30100/api/login", {
         email,
         password,
       });

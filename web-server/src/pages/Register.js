@@ -11,7 +11,7 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5010/api/register", {
+      const response = await axios.post("https://stage.teenaa.shop:30100/api/register", {
         email,
         password,
       });
