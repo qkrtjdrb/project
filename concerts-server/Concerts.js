@@ -8,7 +8,7 @@ app.use(express.json());
 
 // 환경 변수 로드
 const PORT = 5000;
-const DB_HOST = process.env.DB_HOST || "concerts-server-db";
+const DB_HOST = process.env.DB_HOST || "localhost";
 const DB_USER = process.env.DB_USER || "root";
 const DB_PASSWORD = process.env.DB_PASSWORD || "root";
 const DB_NAME = process.env.DB_NAME || "concerts";
