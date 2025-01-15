@@ -17,7 +17,7 @@ function Concerts() {
 
   useEffect(() => {
     axios
-      .get("https://stage.teenaa.shop:30005/Concerts")
+      .get("https://stage.teenaa.shop:30003/Concerts")
       .then((response) => {
         setConcerts(response.data);
       })
@@ -30,7 +30,7 @@ function Concerts() {
   const handleEnterQueue = async () => {
     try {
       // 서버에 '대기열 등록' 요청
-      const response = await axios.post("https://stage.teenaa.shop:30010/api/enter-queue");
+      const response = await axios.post("https://stage.teenaa.shop:30003/api/enter-queue");
       const data = response.data;
 
       // 서버가 { queueId: 'xxxx-xxx-xxxx', message: '...' } 같은 형태로 응답한다고 가정
