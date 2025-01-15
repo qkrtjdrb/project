@@ -16,7 +16,7 @@ const DB_PORT = process.env.DB_PORT || "3306"
 
 let db;
 
-//ada
+
 
 // MySQL 연결
 async function connectToDatabase() {
